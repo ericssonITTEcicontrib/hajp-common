@@ -10,6 +10,7 @@ import lombok.Getter;
  */
 public class ForwardToOrchestratorMessage implements ClusterInternalMessage {
 
+    private static final long serialVersionUID = 438165791511994009L;
     @Getter private Object messageContent;
 
     /**

@@ -1,4 +1,4 @@
-package com.ericsson.jenkinsci.hajp.messages.plugins;
+package com.ericsson.jenkinsci.hajp.messages.GlobalConfig;
 
 import com.ericsson.jenkinsci.hajp.operation.OperationType;
 import lombok.Getter;
@@ -9,7 +9,8 @@ import java.util.Map;
 /**
  * A synchronize plugin message class to carry information for replication of plugin configuration
  */
-public class SynchronizePluginMessage extends AbstractPluginsMessage {
+public class SynchronizeGlobalConfigMessage extends AbstractGlobalConfigMessage {
+    private static final long serialVersionUID = -6500904904003814371L;
     @Getter private final Map<String, byte[]> fileMap;
 
     /**
@@ -17,10 +18,10 @@ public class SynchronizePluginMessage extends AbstractPluginsMessage {
      * @param fileName the file name
      * @param fileAsByteArray the file content as bytes array
      */
-    public SynchronizePluginMessage(String fileName, byte[] fileAsByteArray) {
+    public SynchronizeGlobalConfigMessage(String fileName, byte[] fileAsByteArray) {
         this.fileMap = new HashMap<>();
         fileMap.put(fileName, fileAsByteArray);
-        this.operationType = OperationType.SYNCHRONIZE_PLUGIN;
+        this.operationType = OperationType.SYNCHRONIZE_GLOBAL_CONFIG;
     }
 
     /**
