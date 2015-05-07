@@ -10,6 +10,7 @@ import java.util.Map;
  * A synchronize plugin message class to carry information for replication of plugin configuration
  */
 public class SynchronizeGlobalConfigMessage extends AbstractGlobalConfigMessage {
+    private static final long serialVersionUID = -6500904904003814371L;
     @Getter private final Map<String, byte[]> fileMap;
 
     /**
