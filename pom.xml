@@ -4,7 +4,7 @@
 
     <groupId>com.ericsson.jenkinsci.hajp</groupId>
     <artifactId>hajp-common</artifactId>
-    <version>1.0.10-SNAPSHOT</version>
+    <version>1.0.10</version>
     <name>Jenkins High-Availability Common Library</name>
     <description>This is common library for the Jenkins High Availabilty Plugin</description>
     <url>https://github.com/danielyinanc/hajp-common</url>
